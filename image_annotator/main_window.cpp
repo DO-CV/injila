@@ -170,14 +170,16 @@ void AnnotatorMainWindow::openImage()
 
   // Repopulate the label editor.
   m_labelEditor->setRowCount(superpixels.size());
-  for (int row = 0; row < superpixels.size(); ++row)
+  for (auto row = 0; row < superpixels.size(); ++row)
   {
     // Get the superpixel ID.
-    const auto& superpixelPolygon = superpixels[row];
-    PolygonItem *poly = qgraphicsitem_cast<PolygonItem *>(superpixelPolygon);
+    auto *superpixelPolygon = superpixels[row];
+    auto *poly = qgraphicsitem_cast<PolygonItem *>(superpixelPolygon);
+    auto superpixelId = poly->id();
+
+    // Sanity check.
     if (!poly)
       throw std::runtime_error("Superpixel polygon is null!");
-    int superpixelId = poly->id();
 
     // Create a new item for editing superpixel labels.
     m_labelEditor->setItem(superpixelId, 0, new QTableWidgetItem(""));
