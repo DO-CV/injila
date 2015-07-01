@@ -2,6 +2,8 @@
 
 `Injila` is a hindi word which means `scripture`.
 
+![alt text](https://github.com/DO-CV/injila/blob/master/doc/injila_screenshot.jpg?raw=true "Annotation result")
+
 ## Bugs?
 Please let me know by writing an issue ticket in GitHub.
 
