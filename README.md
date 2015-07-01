@@ -1,3 +1,3 @@
 # injila
 
-`Injila` is hindi name and means `scripture`.
+`Injila` is a hindi word which means `scripture`.
