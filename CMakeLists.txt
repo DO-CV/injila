@@ -23,7 +23,10 @@ include_directories(
   ${Boost_INCLUDE_DIR}
   ${CUDA_TOOLKIT_INCLUDE}
   ${DO_Sara_INCLUDE_DIRS}
+  src
   third_party
+  third_party/json/src
+  third_party/gtest/include
 )
 
 link_directories(${Boost_LIBRARY_DIR})
@@ -32,9 +35,5 @@ link_directories(${Boost_LIBRARY_DIR})
 # Third-party libraries.
 add_subdirectory(third_party)
 
-# Libraries.
-add_subdirectory(kmeans)
-add_subdirectory(superpixel)
-
-# Programs.
-add_subdirectory(image_annotator)
+# Compile libraries and programs.
+add_subdirectory(src)
