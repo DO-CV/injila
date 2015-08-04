@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 2.8)
 project(Injila)
 
 
-set(DO_USE_STATIC_LIBS 1)
 if (WIN32)
   set(DO_Sara_DIR "C:/Program Files/DO-Sara/include/DO/Sara")
 else ()
